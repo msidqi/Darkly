@@ -1,0 +1,5 @@
+enter /.robots
+you will find /whatever listed to not allow web crawlers to enter this path.
+if you access/whatever you will find a file name htpasswd, download it, decrypt the md5 password
+/admin enter the user and password you found in htpasswd file.
+
