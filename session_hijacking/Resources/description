@@ -1,5 +1,1 @@
-/index.php?page=survey
-inspect element, change onchange="javascript:this.form.submit();" to onchange="alert(document.cookie)"
-then it will prompt I_am_admin=[md5-hash]
-the md5 hash = false
-crypt true to md5 and modify the cookie to the result hash, boom you got the flog
+change the cookie to I_am_admin=false with crypted to md5.
