@@ -1,0 +1,2 @@
+http://10.12.100.21/index.php?page=redirect&site=linkedin
+its seems like the redirection is not restricted in the backend, the developer doesn't check if a user allowed to be redirect to X site.
