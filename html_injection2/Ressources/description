@@ -1,5 +1,0 @@
-/index.php?page=feedback
-type single character .... e, r, t, i, c...
-
-
-Name is vulnerable to html injection <h1>STRONG</h1>
