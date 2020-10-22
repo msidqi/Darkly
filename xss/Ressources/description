@@ -1,5 +1,5 @@
 /index.php?page=feedback
 
-scripts can be injected in title 
+scripts can be injected in description <script>alert(2)</script> 
 
-Description injects html<h1>STRONG</h1>
+description injects html<h1>STRONG</h1>
