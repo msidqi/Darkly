@@ -1,2 +1,2 @@
-/index.php?page=recover
+http://${IP}/index.php?page=recover
 inject the hidden <input> tag's value to anything different than "webmaster@borntosec.com"

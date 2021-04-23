@@ -1,5 +1,3 @@
-/index.php?page=feedback
+http://${IP}/index.php?page=feedback
 
-scripts can be injected in description <script>alert(2)</script> 
-
-description injects html<h1>STRONG</h1>
+scripts can be injected in Name field <SCRIPT>alert(2)</SCRIPT>

@@ -1,1 +1,4 @@
-try to upload a php file after changing its content-type to image/jpeg
+in: http://${IP}/?page=upload
+
+upload a php file and change content-type header to image/jpg
+

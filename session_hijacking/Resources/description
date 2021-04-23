@@ -1,1 +1,1 @@
-change the cookie to I_am_admin=false with crypted to md5.
+change the cookie to I_am_admin -> md5(true) -> b326b5062b2f0e69046810717534cb09.

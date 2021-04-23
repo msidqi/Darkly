@@ -3,7 +3,7 @@ import re
 import sys
 
 if (len(sys.argv) != 2):
-    print("usage: py crawl.py [url to crawl]")
+    print("usage: python3 crawl.py [url to crawl]")
     exit()
 
 globalEntrypoint = sys.argv[1]
@@ -21,11 +21,13 @@ def crawl(entrypoint):
     for match in matches:
         if match == 'README':
             matchResponse = requests.get(entrypoint + match)
-            f.write(matchResponse.text + ' ' + entrypoint+match + '\n')
-            #print(requests.get(entrypoint+match).text)
+            flag = re.match("[a-z\d]+", matchResponse.text)
+            if flag:
+                print("Flag: " + flag.group())
+                f.write("Flag: " + flag.group())
         else:
-           # print('crawling...  ', entrypoint+match)
             crawl(entrypoint+match)
 
+print('crawling...  ' + globalEntrypoint)
 crawl(globalEntrypoint)
 f.close()
