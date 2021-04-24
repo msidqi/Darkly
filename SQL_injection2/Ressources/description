@@ -15,6 +15,8 @@ url
 title
 comment
 
+12 UNION SELECT id, comment FROM list_images
+
 12 UNION SELECT 1, comment FROM list_images WHERE 
 id = 5
 
